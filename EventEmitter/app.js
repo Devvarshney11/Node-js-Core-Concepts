@@ -14,3 +14,8 @@ myEmitter.on("foo", (a, b) => {
 
 myEmitter.emit("foo");
 myEmitter.emit("foo", 42, 13);
+
+myEmitter.on("error", (err) => {
+  console.error("whoops! there was an error");
+});
+myEmitter.emit("error", new Error("whoops!"));
